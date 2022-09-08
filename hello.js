@@ -46,20 +46,35 @@ for(let photo=1;photo<=4;photo++){
   }
 }
 
-// var img = document.getElementById("myImg01");
-// var img = document.getElementById("myImg02");
-// var img = document.getElementById("myImg03");
-// var img = document.getElementById("myImg04");
-
 var boxImg = document.getElementById("img01");
-
-// img.onclick = function(){
-//   modal.style.display = "block";
-//   modalImg.src = this.src;
-// }
 
 var span = document.getElementsByClassName("close")[0];
 
 span.onclick = function() {
   box.style.display = "none";
 }
+
+const sections=document.querySelectorAll('section');
+const navitem=document.querySelectorAll('#navigation #menu ul li a');
+window.addEventListener('scroll',()=>{
+  let current="";
+  sections.forEach(section=>{
+    const sectionTop=section.offsetTop;
+    const sectionHeight=section.clientHeight;
+    
+    if(pageYOffset>=((sectionTop-100)-sectionHeight/3)){
+      current=section.getAttribute('id');
+      console.log(pageYOffset);
+  console.log(sectionTop);
+    }
+  })
+  console.log(current);
+  
+  navitem.forEach(a=>{
+    a.classList.remove('active');
+    if(a.classList.contains(current)){
+      a.classList.add('active');
+    }
+  })
+})
+

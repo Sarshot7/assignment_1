@@ -61,7 +61,7 @@ main .section2{
 }
 main .section3{
 	height: 40%;
-	background-image: url("./sec3.jpg" );
+	background-image: url("./back.jpg" );
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -104,11 +104,15 @@ footer{
 #contact{
     position: relative;
 }
+#contact p{
+    position: relative;
+	top: 40px;
+}
 #contact-box{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 14px;
+    padding-bottom: 200px;
 }
 #contact-box input, 
 #contact-box textarea{
@@ -134,6 +138,9 @@ p{
 #footer{
 	color:#f1f1f1;
 	text-align: center;
+	position: relative;
+	top: 150px;
+	margin: 0;
 }
 .box {
 	display: none; /* Hidden by default */
@@ -171,4 +178,12 @@ p{
 	color: #bbb;
 	text-decoration: none;
 	cursor: pointer;
+  }
+
+  #navigation #menu ul li a.active{
+	background-color: #1a35e3;
+	transition: 0.3 ease background-color;
+  }
+  #navigation #menu ul li a.active{
+	color: white;
   }
